@@ -9,7 +9,7 @@ module.exports = {
     filename: 'main.[hash].bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
