@@ -33,6 +33,17 @@ module.exports = {
             options: {}
           }
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 999999 // 1mb === 1,000,000 bytes... 1 byte less
+            }
+          }
+        ]
       }
     ]
   },
