@@ -4,7 +4,7 @@
   "description": "A webpack configuration demonstration.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack"
   },
   "author": "Jon Eric Escobedo [linkedin.com/in/jonericescobedo]",
   "license": "ISC",
