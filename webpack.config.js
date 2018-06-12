@@ -5,7 +5,7 @@ module.exports = {
   entry: './js/main.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'main.bundle.js'
+    filename: 'main.[hash].bundle.js'
   },
   module: {
     loaders: [
