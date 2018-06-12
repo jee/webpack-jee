@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './js/main.js',
@@ -15,11 +16,24 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader' // compiles Sass to CSS
+        ]
       }
     ]
   },
   stats: {
     colors: true
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'style.[contenthash].css'
+    })
+  ]
 };
